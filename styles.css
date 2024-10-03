@@ -40,6 +40,11 @@ main{
     padding:1rem;
 }
 
+main #desktop{
+    background-color: teal;
+    color: white;
+}
+
 aside{
     grid-area: sidebar;
     background-color: rgb(238, 217, 255);
@@ -54,7 +59,18 @@ footer{
 }
 
 /*Responsive grid*/
-
 @media screen and (max-width:600px){
-    
+    #container{
+        grid-template-areas:
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+        grid-template-columns:1fr;
+        grid-template-rows: auto 1fr auto auto;
+    }
+    main #desktop{
+        display:none;
+        /*display:block;*/
+    }
 }
